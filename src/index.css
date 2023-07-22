@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    font-family: 'Playfair Display', serif;
+}
+
+/* styled fonts here */
+.cursive-font {
+    font-family: 'Dancing Script', cursive;
+    color: rgb(216, 143, 8);
+}
