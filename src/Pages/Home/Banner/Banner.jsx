@@ -5,7 +5,7 @@ import { FaArrowRight, FaBrain } from 'react-icons/fa';
 
 const Banner = () => {
     return (
-        <div className='hat-art-bg'>
+        <div className=''>
             <div className='grid md:flex items-center justify-between md:w-10/12 md:mx-auto mx-5 py-20'>
                 <div className='space-y-3 pt-14 md:pt-0'>
                     <h1 className='text-3xl md:text-5xl'>Your Gateway to Higher <br />Education</h1>
