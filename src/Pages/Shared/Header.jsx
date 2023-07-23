@@ -12,7 +12,7 @@ const Header = () => {
 
     return (
         <div className='bg-white'>
-            <div className="navbar fixed z-10 md:px-24 shadow-md">
+            <div className="navbar fixed z-20 bg-orange-50 md:px-24 shadow-md">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -43,7 +43,7 @@ const Header = () => {
                             <FaSearch className='absolute top-[6px] right-2 bg-orange-400 text-white w-9 h-9 p-2 rounded-full cursor-pointer' />
                         </span>
                         <img className='w-10 h-10 hidden md:block' src="https://simpleicon.com/wp-content/uploads/user1.png" alt="" />
-                        <Link className="bg-orange-400 py-2 px-5 rounded-full  text-white hidden md:block">Login</Link>
+                        <Link className="bg-orange-400 shadow-lg hover:shadow-lg hover:shadow-orange-300 font-bold py-2 px-5 rounded-full  text-white hidden md:block" style={{transition: '.4s'}}>Login</Link>
                     </span>
                 </div>
             </div>

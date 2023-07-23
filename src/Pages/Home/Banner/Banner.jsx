@@ -5,13 +5,13 @@ import { FaArrowRight, FaBrain } from 'react-icons/fa';
 
 const Banner = () => {
     return (
-        <div className=''>
-            <div className='grid md:flex items-center justify-between md:w-10/12 md:mx-auto mx-5 py-20'>
+        <div className='bg-orange-50'>
+            <div className='grid md:flex items-center justify-between md:w-10/12 md:mx-auto mx-5 pt-28'>
                 <div className='space-y-3 pt-14 md:pt-0'>
                     <h1 className='text-3xl md:text-5xl'>Your Gateway to Higher <br />Education</h1>
                     <p className='text-lg'>Explore, Compare, and Reserve Your Seat Online - Your Journey <br />to Success Starts Here!</p>
                     <div>
-                        <Link to='/' className='flex items-center justify-center gap-2 bg-orange-400 py-2 px-5 w-40 rounded-full  text-white'>Learn More <FaArrowRight /></Link>
+                        <Link to='/' className='flex items-center justify-center gap-2  bg-orange-400 shadow-lg hover:shadow-lg hover:shadow-orange-300 text-white font-bold py-2 px-5 w-40 rounded-full' style={{transition: '.4s'}}>Learn More <FaArrowRight /></Link>
                     </div>
                 </div>
                 <div className='flex justify-center items-center relative md:pt-0 pt-10'>
