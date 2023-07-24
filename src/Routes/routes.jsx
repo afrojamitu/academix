@@ -9,6 +9,8 @@ import Admission from "../Pages/Admission/Admission";
 import AdmissionForm from "../Pages/AdmissionForm/AdmissionForm";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
+import PrivateRoute from "./PrivateRoute";
+import MyCollege from "../Pages/MyCollege/MyCollege";
 
   const router = createBrowserRouter([
     {
@@ -24,9 +26,13 @@ import SignUp from "../Pages/SignUp/SignUp";
             element: <Colleges></Colleges>
           },
           {
+            path: 'myCollege',
+            element: <MyCollege></MyCollege>
+          },
+          {
             path: 'colleges/:id',
-            element: <CollegeDetail></CollegeDetail>,
-            loader: ({params}) => fetch(`http://localhost:5000/colleges/${params.id}`)
+            element: <PrivateRoute><CollegeDetail></CollegeDetail></PrivateRoute> ,
+            loader: ({params}) => fetch(`https://academix-server.vercel.app/colleges/${params.id}`)
           },
           {
             path: 'admission',
@@ -34,8 +40,8 @@ import SignUp from "../Pages/SignUp/SignUp";
           },
           {
             path: 'admission/:id',
-            element: <AdmissionForm></AdmissionForm>,
-            loader: ({params}) => fetch(`http://localhost:5000/admission/${params.id}`)
+            element: <PrivateRoute><AdmissionForm></AdmissionForm></PrivateRoute>,
+            loader: ({params}) => fetch(`https://academix-server.vercel.app/admission/${params.id}`)
           },
           {
             path: 'signUp',

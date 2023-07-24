@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { FaArrowLeft } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import useCollege from '../../Hooks/useCollege';
 
 const Admission = () => {
     const [colleges] = useCollege();
+
     return (
         <div className='md:w-10/12 md:mx-auto mx-5 pt-36 pb-20'>
             <div className='space-y-5'>

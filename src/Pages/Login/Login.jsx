@@ -36,11 +36,11 @@ const Login = () => {
             <div className='grid md:flex justify-between shadow-2xl md:w-7/12 md:mx-auto mx-10'>
 
                 <form onSubmit={handleLogin} className='space-y-2 grid md:w-[60%] p-10'>
-                    <input className='border-b-2 border-orange-200 py-1 px-4 focus:outline-none focus:border-orange-400 focus:ring-orange-200' type="text" name='name' placeholder='Full Name' />
+                    <input className='border-b-2 border-orange-200 py-1 px-4 focus:outline-none focus:border-orange-400 focus:ring-orange-200' type="text" name='name' placeholder='Full Name' required/>
 
-                    <input className='border-b-2 border-orange-200 py-1 px-4 focus:outline-none focus:border-orange-400 focus:ring-orange-200' type="email" name='email' placeholder='Email' />
+                    <input className='border-b-2 border-orange-200 py-1 px-4 focus:outline-none focus:border-orange-400 focus:ring-orange-200' type="email" name='email' placeholder='Email' required/>
 
-                    <input className='border-b-2 border-orange-200 py-1 px-4 focus:outline-none focus:border-orange-400 focus:ring-orange-200' type="password" name='password' placeholder='Password' />
+                    <input className='border-b-2 border-orange-200 py-1 px-4 focus:outline-none focus:border-orange-400 focus:ring-orange-200' type="password" name='password' placeholder='Password' required/>
 
                     <div className='flex justify-center pt-4'>
                         <input type="submit" value="Login" className='w-full rounded-full py-0 bg-orange-400 shadow-xl hover:shadow-lg hover:shadow-orange-300 text-white font-bold' style={{ transition: '.4s' }} />

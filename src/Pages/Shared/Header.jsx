@@ -1,15 +1,27 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
+import { AuthContext } from '../../Provider/AuthProvider';
 
 const Header = () => {
 
+    const {user, logOut} = useContext(AuthContext);
+
     const navlinks = <>
-        <Link to='/'>Home</Link>
-        <Link to='/colleges'>Colleges</Link>
-        <Link to='/admission'>Admission</Link>
-        <Link to='/mycollege'>My College</Link>
+        <NavLink to='/' className={({ isActive }) => isActive ? 'border-b-2 border-orange-500' : ''}>Home</NavLink>
+
+        <NavLink to='/colleges' className={({ isActive }) => isActive ? 'border-b-2 border-orange-500' : ''}>Colleges</NavLink>
+
+        <NavLink to='/admission' className={({ isActive }) => isActive ? 'border-b-2 border-orange-500' : ''}>Admission</NavLink>
+
+        <NavLink to='/myCollege' className={({ isActive }) => isActive ? 'border-b-2 border-orange-500' : ''}>My College</NavLink>
     </>
+
+    const handleLogout = () => {
+        logOut()
+            .then(() => { })
+            .then(error => console.log(error))
+    }
 
     return (
         <div className=''>
@@ -33,18 +45,19 @@ const Header = () => {
                     </span>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 gap-8 text-base font-semibold">
+                    <ul className="menu menu-horizontal px-3 gap-8 text-base font-semibold">
                         {navlinks}
                     </ul>
                 </div>
                 <div className="navbar-end">
                     <span className='flex items-center gap-3'>
-                        <span className='relative'>
-                            <input type="text" placeholder="Search. . ." className="input w-full max-w-xs rounded-full border border-slate-200" />
-                            <FaSearch className='absolute top-[6px] right-2 bg-orange-400 text-white w-9 h-9 p-2 rounded-full cursor-pointer' />
-                        </span>
+                        
                         <img className='w-10 h-10 hidden md:block' src="https://simpleicon.com/wp-content/uploads/user1.png" alt="" />
-                        <Link to='/login' className="bg-orange-400 shadow-lg hover:shadow-lg hover:shadow-orange-300 font-bold py-2 px-5 rounded-full  text-white hidden md:block" style={{transition: '.4s'}}>Login</Link>
+                        {
+                            user ? <button onClick={handleLogout} className="bg-orange-400 shadow-lg hover:shadow-lg hover:shadow-orange-300 font-bold py-2 px-5 rounded-full  text-white hidden md:block" style={{ transition: '.4s' }}>Logout</button> 
+                            : 
+                            <Link to='/login' className="bg-orange-400 shadow-lg hover:shadow-lg hover:shadow-orange-300 font-bold py-2 px-5 rounded-full  text-white hidden md:block" style={{ transition: '.4s' }}>Login</Link>
+                        }
                     </span>
                 </div>
             </div>

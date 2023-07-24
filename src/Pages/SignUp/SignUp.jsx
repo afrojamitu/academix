@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 
 const SignUp = () => {
     const [error, setError] = useState()
-    const { createUser, googleSignIn, updateUserprofile } = useContext(AuthContext);
+    const { createUser, updateUserprofile } = useContext(AuthContext);
     const navigate = useNavigate();
 
     const handleSignUp = event => {
@@ -32,7 +32,7 @@ const SignUp = () => {
                 updateUserprofile(name, email)
                     .then(() => {
                         const saveduser = { name: name, email: email}
-                        fetch('http://localhost:5000/users', {
+                        fetch('https://academix-server.vercel.app/users', {
                             method: 'POST',
                             headers: {
                                 'content-type': 'application/json'
@@ -60,13 +60,6 @@ const SignUp = () => {
             })
     }
 
-    const handleGoogleSignIn = () =>{
-        googleSignIn()
-        .then(result =>{
-            console.log(result);
-        })
-        .catch(error => console.log(error))
-    }
     return (
         <div className='pt-24 md:pt-36 pb-20'>
             <h1 className="cursive-font text-5xl text-center">WELCOME!</h1>
@@ -74,15 +67,15 @@ const SignUp = () => {
             <div className='grid md:flex justify-between shadow-2xl mx-10 md:w-7/12 md:mx-auto'>
 
                 <form onSubmit={handleSignUp} className='space-y-4 grid md:w-[60%] p-10'>
-                    <input className='border-b-2 border-orange-200 py-1 px-4 focus:outline-none focus:border-orange-400 focus:ring-orange-200' type="text" name='name' placeholder='Full Name' />
+                    <input className='border-b-2 border-orange-200 py-1 px-4 focus:outline-none focus:border-orange-400 focus:ring-orange-200' type="text" name='name' placeholder='Full Name' required/>
 
-                    <input className='border-b-2 border-orange-200 py-1 px-4 focus:outline-none focus:border-orange-400 focus:ring-orange-200' type="email" name='email' placeholder='Email' />
+                    <input className='border-b-2 border-orange-200 py-1 px-4 focus:outline-none focus:border-orange-400 focus:ring-orange-200' type="email" name='email' placeholder='Email' required/>
 
-                    <input className='border-b-2 border-orange-200 py-1 px-4 focus:outline-none focus:border-orange-400 focus:ring-orange-200' type="password" name='password' placeholder='Password' />
+                    <input className='border-b-2 border-orange-200 py-1 px-4 focus:outline-none focus:border-orange-400 focus:ring-orange-200' type="password" name='password' placeholder='Password' required/>
 
-                    <input className='border-b-2 border-orange-200 py-1 px-4 focus:outline-none focus:border-orange-400 focus:ring-orange-200' type="password" name='confirmPassword' placeholder='Re-type Password' />
+                    <input className='border-b-2 border-orange-200 py-1 px-4 focus:outline-none focus:border-orange-400 focus:ring-orange-200' type="password" name='confirmPassword' placeholder='Re-type Password' required/>
 
-                    <input className='border-b-2 border-orange-200 py-1 px-4 focus:outline-none focus:border-orange-400 focus:ring-orange-200' type="text" name='photo' placeholder='Direct link from imgbb.com' />
+                    <input className='border-b-2 border-orange-200 py-1 px-4 focus:outline-none focus:border-orange-400 focus:ring-orange-200' type="text" name='photo' placeholder='Direct link from imgbb.com' required/>
 
                     <div className='flex justify-center pt-4'>
                         <input type="submit" value="Sign Up" className='w-full rounded-full py-1 bg-orange-400 shadow-xl hover:shadow-lg hover:shadow-orange-300 text-white font-bold' style={{ transition: '.4s' }} />
