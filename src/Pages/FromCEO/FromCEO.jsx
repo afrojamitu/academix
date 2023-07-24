@@ -2,7 +2,7 @@ import React from 'react';
 
 const FromCEO = () => {
     return (
-        <div className='md:w-10/12 md:mx-auto mx-5 mt-8 mb-14'>
+        <div className='md:w-10/12 md:mx-auto mx-5 mt-12 mb-14'>
             <div className='grid md:grid-cols-2 gap-10'>
                 <div>
                     <img src="https://media.istockphoto.com/id/981749414/photo/positive-and-professional-everything-you-want-in-an-entrepreneur.jpg?s=612x612&w=0&k=20&c=Tp04T5oHLnKtmosfilVaBRstMN1ARc1li8bQN8fx5RA=" alt="" />

@@ -7,6 +7,7 @@ const Header = () => {
     const navlinks = <>
         <Link to='/'>Home</Link>
         <Link to='/colleges'>Colleges</Link>
+        <Link to='/admission'>Admission</Link>
         <Link to='/mycollege'>My College</Link>
     </>
 
@@ -43,7 +44,7 @@ const Header = () => {
                             <FaSearch className='absolute top-[6px] right-2 bg-orange-400 text-white w-9 h-9 p-2 rounded-full cursor-pointer' />
                         </span>
                         <img className='w-10 h-10 hidden md:block' src="https://simpleicon.com/wp-content/uploads/user1.png" alt="" />
-                        <Link className="bg-orange-400 shadow-lg hover:shadow-lg hover:shadow-orange-300 font-bold py-2 px-5 rounded-full  text-white hidden md:block" style={{transition: '.4s'}}>Login</Link>
+                        <Link to='/login' className="bg-orange-400 shadow-lg hover:shadow-lg hover:shadow-orange-300 font-bold py-2 px-5 rounded-full  text-white hidden md:block" style={{transition: '.4s'}}>Login</Link>
                     </span>
                 </div>
             </div>

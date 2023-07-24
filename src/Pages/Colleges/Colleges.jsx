@@ -25,6 +25,7 @@ const Colleges = () => {
                             <h1 className='text-2xl'>{college.name}</h1>
                             <p>Apply by: {college.admissionDates}</p>
                             <p>Events: {college.event.length}/year</p>
+                            <p>Research History: {college.researchNumber}/year</p>
                             <p>Sports: {college.sports.length} sports we practice in our campus</p>
                             <p>{college.ratings}</p>
                             <div className='py-2'>

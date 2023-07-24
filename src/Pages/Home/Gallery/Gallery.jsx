@@ -2,7 +2,7 @@ import React from 'react';
 
 const Gallery = () => {
     return (
-        <div className=''>
+        <div className='pb-5'>
             <div className='md:w-10/12 md:mx-auto mx-5 my-10'>
                 <h1 className="text-5xl cursive-font pb-4">100+ Graduates In A Frame</h1>
                 <p>Witness the glory of our graduates! This section proudly showcases over 100 accomplished individuals who have passed through our institution's doors, leaving an indelible mark on the world. Each graduate's success story is a testament to our commitment to fostering excellence and empowering future leaders. From groundbreaking research to influential contributions in various fields, these outstanding individuals embody the essence of our educational mission. Join us in celebrating their achievements and drawing inspiration from their journeys toward greatness.</p>

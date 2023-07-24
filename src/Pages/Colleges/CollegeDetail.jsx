@@ -40,10 +40,9 @@ const CollegeDetail = () => {
                 </div>
 
                 <div className='w-full'>
-                    <Link className='flex items-center justify-center rounded-full py-2 bg-orange-400 shadow-lg hover:shadow-lg hover:shadow-orange-300 text-white font-bold' style={{transition: '.4s'}}>Apply Now</Link>
+                    <Link to='/admission' className='flex items-center justify-center rounded-full py-2 bg-orange-400 shadow-lg hover:shadow-lg hover:shadow-orange-300 text-white font-bold' style={{transition: '.4s'}}>Apply Now</Link>
                 </div>
             </div>
-
         </div>
     );
 };
