@@ -12,7 +12,7 @@ const Header = () => {
     </>
 
     return (
-        <div className='bg-white'>
+        <div className=''>
             <div className="navbar fixed z-20 bg-orange-50 md:px-24 shadow-md">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -24,12 +24,12 @@ const Header = () => {
 
                             {navlinks}
 
-                            <Link className="bg-orange-400 py-2 px-5 rounded-full  text-white">Login</Link>
+                            <Link to='/login' className="bg-orange-400 py-2 px-5 rounded-full  text-white">Login</Link>
                         </ul>
                     </div>
                     <span className='flex items-center'>
                         <img className='md:w-24 w-14' src="https://i.ibb.co/V38wWgR/logo.png" alt="" />
-                        <Link className="md:text-5xl text-3xl font-semibold cursive-font">Academix</Link>
+                        <Link className="md:text-5xl text-3xl font-semibold cursive-font hidden md:block">Academix</Link>
                     </span>
                 </div>
                 <div className="navbar-center hidden lg:flex">
